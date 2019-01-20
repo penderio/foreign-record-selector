@@ -1,5 +1,5 @@
 {
-  "name": "foreign-record-selector",
+  "name": "@cmds/foreign-record-selector",
   "version": "0.1.0",
   "description": "Used for selecting a foreign record",
   "main": "lib/index.js",
