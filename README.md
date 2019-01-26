@@ -1,5 +1,7 @@
 # ForeignRecordSelector
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/entercosmos/foreign-record-selector.svg)](https://greenkeeper.io/)
+
 [![npm package][npm-badge]][npm]
 
 Used for selecting a foreign record.	
