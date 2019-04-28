@@ -13,29 +13,25 @@ export default class ForeignRecordSelectorDemo2 extends React.Component {
     render() {
 
         return (
-            <div>
-                <div
-                    className={css`
-                        width: 600px;
-                        height: 760px;
-                        border: 1px solid;
-                        position: relative;
-                    `}
-                >
-                    <ForeignRecordSelector
-                        id={'frs3'}
-                        records={this.state.records}
-                        query={this.state.query}
-                        loading={true}
-                        noResults={true}
-                        createRecordName={this.state.query}
-                        onQueryChange={this.handleQueryChange}
-                        onCreateRecordClick={() => alert('onCreateRecordClick')}
-                        onCloseClick={() => alert('onCloseClick')}
-                        onSelect={({id}) => alert('onSelect: ' + id)}
-                        recordRenderer={recordRenderer}
-                    />
-                </div>
+            <div
+                className={css`
+                    position: relative;
+                    height: 800px;
+                `}
+            >
+                <ForeignRecordSelector
+                    id={'frs3'}
+                    records={this.state.records}
+                    query={this.state.query}
+                    loading={true}
+                    noResults={true}
+                    createRecordName={this.state.query}
+                    onQueryChange={this.handleQueryChange}
+                    onCreateRecordClick={() => alert('onCreateRecordClick')}
+                    onCloseClick={() => alert('onCloseClick')}
+                    onSelect={({id}) => alert('onSelect: ' + id)}
+                    recordRenderer={recordRenderer}
+                />
             </div>
         )
     }

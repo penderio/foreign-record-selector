@@ -4,6 +4,7 @@ import {css, injectGlobal} from 'emotion'
 import ForeignRecordSelectorDemo from './ForeignRecordSelectorDemo'
 import ForeignRecordSelectorDemo2 from './ForeignRecordSelectorDemo2'
 import ForeignRecordSelectorDemo3 from './ForeignRecordSelectorDemo3'
+import {Canvas, Heading, Paragraph, Box} from '@cmds/demo-utils'
 
 injectGlobal`
     * {
@@ -11,6 +12,7 @@ injectGlobal`
     }
     body {
         font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol;
+        margin: 0;
     }
 `
 
@@ -21,43 +23,29 @@ args: ${JSON.stringify(args, null, 2)}
     `)
 }
 
-class Viewport extends React.Component {
-
-    render() {
-
-        return (
-            <div
-                className={css`
-                    background-color: #e9ebee;
-                    padding: 20px;
-                `}
-            >
-                {this.props.children}
-            </div>
-        )
-    }
-}
 
 class Demo extends Component {
     render() {
-        return <div>
-            <h1>ForeignRecordSelector Demo</h1>
-            <p>
-                Used for selecting a foreign record.
-            </p>
-            <h2>
+        return <Canvas>
+            <Heading>
                 General
-            </h2>
-            <ForeignRecordSelectorDemo />
-            <h2>
+            </Heading>
+            <Box>
+                <ForeignRecordSelectorDemo />
+            </Box>
+            <Heading>
                 Loading
-            </h2>
-            <ForeignRecordSelectorDemo2 />
-            <h2>
+            </Heading>
+            <Box>
+                <ForeignRecordSelectorDemo2 />
+            </Box>
+            <Heading>
                 No matching records
-            </h2>
-            <ForeignRecordSelectorDemo3 />
-        </div>
+            </Heading>
+            <Box>
+                <ForeignRecordSelectorDemo3 />
+            </Box>
+        </Canvas>
     }
 }
 
