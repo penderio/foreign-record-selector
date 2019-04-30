@@ -157,12 +157,7 @@ const fieldRenderer = ({id, field, props}) => {
                 attachments={cell.attachments}
             />
         ),
-        linkToAnotherRecord: ({props, cell}) => (
-            <LinkToAnotherRecordField
-                {...props}
-                records={cell.records}
-            />
-        ),
+        linkToAnotherRecord: () => <div>not supported</div>,
         multipleSelect: ({props, field, cell}) => (
             <MultipleSelectField
                 {...props}

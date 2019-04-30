@@ -1,6 +1,6 @@
 {
   "name": "@cmds/foreign-record-selector",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Used for selecting a foreign record",
   "main": "lib/index.js",
   "module": "es/index.js",
@@ -21,26 +21,33 @@
     "test:watch": "nwb test-react --server"
   },
   "dependencies": {
-    "prop-types": "^15.6.2"
+    "prop-types": "^15.7.2"
   },
   "peerDependencies": {
     "react": "16.x"
   },
   "devDependencies": {
-    "@cmds/attachment-field": "^0.8.0",
-    "@cmds/checkbox-field": "^0.3.0",
-    "@cmds/demo-utils": "^0.2.0",
-    "@cmds/link-to-another-record-field": "^0.5.0",
-    "@cmds/long-text-field": "^0.3.1",
-    "@cmds/multiple-select-field": "^0.6.0",
-    "@cmds/number-field": "^0.7.0",
-    "@cmds/record-list-item": "^0.4.0",
-    "@cmds/single-line-text-field": "^0.6.0",
-    "@cmds/single-select-field": "^0.5.0",
+    "@cmds/attachment-field": "^0.18.0",
+    "@cmds/button": "^0.2.0",
+    "@cmds/checkbox-field": "^0.5.0",
+    "@cmds/colors": "^0.3.0",
+    "@cmds/demo-utils": "^0.3.0",
+    "@cmds/icons": "^0.4.0",
+    "@cmds/link-to-another-record-field": "^0.9.0",
+    "@cmds/long-text-field": "^0.8.0",
+    "@cmds/multiple-select-field": "^0.9.0",
+    "@cmds/number-field": "^0.11.0",
+    "@cmds/number-input": "^0.3.0",
+    "@cmds/record-list-item": "^0.8.0",
+    "@cmds/select": "^0.7.0",
+    "@cmds/single-line-text-field": "^0.7.0",
+    "@cmds/single-select-field": "^0.8.0",
+    "@cmds/spinner": "^0.1.0",
+    "@cmds/switch": "^0.2.0",
     "emotion": "^10.0.9",
     "nwb": "0.23.x",
     "react": "^16.7.0",
-    "react-dom": "^16.7.0"
+    "react-dom": "^16.8.6"
   },
   "author": "",
   "homepage": "",

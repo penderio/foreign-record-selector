@@ -2,6 +2,9 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import icons from './icons'
 import {css} from 'emotion'
+import Button from '@cmds/button'
+import plus from '@cmds/icons/lib/plus'
+import spinner from '@cmds/spinner'
 
 const TextBody = ({children}) => (
     <div
@@ -90,6 +93,9 @@ export default class ForeignRecordSelector extends React.Component {
                                     height: 100%;
                                     border: none;
                                     font-size: 16px;
+                                    &:focus {
+                                        outline: none;
+                                    }
                                 `}
                             type="text"
                             placeholder="Find an existing record"
@@ -120,7 +126,7 @@ export default class ForeignRecordSelector extends React.Component {
                             bottom: 60px;
                             left: 0;
                             right: 0;
-                            padding: 10px 0;
+                            padding: 24px 0;
                             overflow-x: hidden;
                             overflow-y: scroll;
                             -webkit-overflow-scrolling: touch;
@@ -132,7 +138,26 @@ export default class ForeignRecordSelector extends React.Component {
                         </TextBody>
                     ) : this.props.loading ? (
                         <TextBody>
-                            Loading...
+                            <div
+                                className={css`
+                                    display: flex;
+                                    align-items: center;
+                                `}
+                            >
+                                <div
+                                    className={css`
+                                        display: flex;
+                                        margin-right: 8px;
+                                    `}
+                                >
+                                    {spinner({
+                                        width: 16
+                                    })}
+                                </div>
+                                <div>
+                                    Loading...
+                                </div>
+                            </div>
                         </TextBody>
                     ) : null}
                     {!this.props.loading && !this.props.noResults ? this.props.records.map(id => (
@@ -140,10 +165,12 @@ export default class ForeignRecordSelector extends React.Component {
                             key={id}
                             className={css`
                                     position: relative;
-                                    padding-top: 5px;
-                                    padding-bottom: 5px;
-                                    padding-left: 15px;
-                                    padding-right: 15px;
+                                    padding-left: 16px;
+                                    padding-right: 16px;
+                                    margin-bottom: 24px;
+                                    &:last-of-type {
+                                        margin-bottom: 0;
+                                    }
                                 `}
                         >
                             {this.props.recordRenderer({
@@ -166,20 +193,13 @@ export default class ForeignRecordSelector extends React.Component {
                             background-color: #fff;
                         `}
                 >
-                    <button
+                    <Button
                         type="button"
-                        className={css`
-                                background: none;
-                                padding: 10px 20px;
-                                border-radius: 6px;
-                                border: none;
-                                font-size: 16px;
-                            `}
+                        icon={plus}
                         onClick={this.handleCreateRecordClick}
                     >
-                        {icons.plus({size: 12})} Add new
-                        record{this.props.createRecordName ? ` named "${this.props.createRecordName}"` : ''}
-                    </button>
+                        Add new record{this.props.createRecordName ? ` named "${this.props.createRecordName}"` : ''}
+                    </Button>
                 </div>
             </div>
         )
