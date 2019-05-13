@@ -1,7 +1,7 @@
 import React from 'react'
 import fieldRenderer from "./fieldRenderer";
 import fields from "./fields";
-import RecordListItem from '@cmds/record-list-item'
+import RecordListItem from '@pndr/record-list-item'
 
 const recordRenderer = ({id, onClick}) => (
     <RecordListItem

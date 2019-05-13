@@ -3,14 +3,13 @@ import {render} from 'react-dom'
 import sample from 'lodash/sample'
 import {css, injectGlobal} from 'emotion'
 
-import CheckboxField from '@cmds/checkbox-field'
-import AttachmentField from '@cmds/attachment-field'
-import LongTextField from '@cmds/long-text-field'
-import SingleLineTextField from '@cmds/single-line-text-field'
-import SingleSelectField from '@cmds/single-select-field'
-import MultipleSelectField from '@cmds/multiple-select-field'
-import NumberField from '@cmds/number-field'
-import LinkToAnotherRecordField from '@cmds/link-to-another-record-field'
+import CheckboxField from '@pndr/checkbox-field'
+import AttachmentField from '@pndr/attachment-field'
+import LongTextField from '@pndr/long-text-field'
+import SingleLineTextField from '@pndr/single-line-text-field'
+import SingleSelectField from '@pndr/single-select-field'
+import MultipleSelectField from '@pndr/multiple-select-field'
+import NumberField from '@pndr/number-field'
 
 const generateAttachment = (i) => {
 

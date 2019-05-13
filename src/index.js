@@ -2,9 +2,9 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import icons from './icons'
 import {css} from 'emotion'
-import Button from '@cmds/button'
-import plus from '@cmds/icons/lib/plus'
-import spinner from '@cmds/spinner'
+import Button from '@pndr/button'
+import plus from '@pndr/icons/lib/plus'
+import spinner from '@pndr/spinner'
 
 const TextBody = ({children}) => (
     <div

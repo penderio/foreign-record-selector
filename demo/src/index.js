@@ -4,7 +4,7 @@ import {css, injectGlobal} from 'emotion'
 import ForeignRecordSelectorDemo from './ForeignRecordSelectorDemo'
 import ForeignRecordSelectorDemo2 from './ForeignRecordSelectorDemo2'
 import ForeignRecordSelectorDemo3 from './ForeignRecordSelectorDemo3'
-import {Canvas, Heading, Paragraph, Box} from '@cmds/demo-utils'
+import {Canvas, Heading, Paragraph, Box} from '@pndr/demo-utils'
 
 injectGlobal`
     * {
