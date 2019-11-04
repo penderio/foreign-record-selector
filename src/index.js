@@ -1,12 +1,12 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import icons from './icons'
-import {css} from 'emotion'
+import { css } from 'emotion'
 import Button from '@pndr/button'
 import plus from '@pndr/icons/lib/plus'
 import spinner from '@pndr/spinner'
 
-const TextBody = ({children}) => (
+const TextBody = ({ children }) => (
     <div
         className={css`
             position: absolute;
@@ -85,7 +85,7 @@ export default class ForeignRecordSelector extends React.Component {
                                     justify-content: center;
                                 `}
                         >
-                            {icons.search({size: 16})}
+                            {icons.search({ size: 16 })}
                         </div>
                         <input
                             className={css`
@@ -116,7 +116,7 @@ export default class ForeignRecordSelector extends React.Component {
                             `}
                         onClick={this.handleCloseClick}
                     >
-                        {icons.close({size: 16})}
+                        {icons.close({ size: 16 })}
                     </button>
                 </div>
                 <div
@@ -194,6 +194,7 @@ export default class ForeignRecordSelector extends React.Component {
                         `}
                 >
                     <Button
+                        size={'sm'}
                         type="button"
                         icon={plus}
                         onClick={this.handleCreateRecordClick}
@@ -212,7 +213,7 @@ export default class ForeignRecordSelector extends React.Component {
         })
     }
 
-    handleSelect = ({e, id}) => {
+    handleSelect = ({ e, id }) => {
 
         if (this.props.onSelect) {
             this.props.onSelect({
