@@ -1,6 +1,6 @@
 {
   "name": "@pndr/foreign-record-selector",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "description": "Used for selecting a foreign record",
   "main": "lib/index.js",
   "module": "es/index.js",
